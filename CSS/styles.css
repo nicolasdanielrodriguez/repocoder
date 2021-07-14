@@ -5,6 +5,9 @@
   box-sizing: border; }
 
 /*Botonera de Inicio*/
+.mainInicio {
+  height: 2000px; }
+
 .logo {
   height: 160px; }
 
@@ -27,8 +30,88 @@ main {
   font-family: 'Dancing Script', cursive; }
 
 /*Sección Index*/
+.img-banner {
+  height: 600px;
+  width: 100%; }
+
+h1 {
+  text-align: left;
+  color: white;
+  top: 10px;
+  right: 50px;
+  font-weight: bolder; }
+
+.boton-compra {
+  position: absolute;
+  top: 3150px;
+  right: 150px;
+  border-radius: 25px;
+  background-color: #e72121;
+  color: white;
+  padding: 20px;
+  text-decoration: none; }
+
+.boton-compra:hover {
+  background-color: #f18585;
+  text-decoration: none;
+  color: white; }
+
+.banner-bottom {
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+  .banner-bottom h3 {
+    font-size: 50px;
+    position: absolute;
+    top: 1800px;
+    right: 120px;
+    z-index: 2;
+    color: white; }
+  .banner-bottom .banner-bottom__boton {
+    position: absolute;
+    background-color: #f17272;
+    border-radius: 20px;
+    padding: 10px;
+    top: 1950px;
+    right: 200px;
+    color: white; }
+  .banner-bottom .banner-bottom__img {
+    margin-top: 50px;
+    height: 700px;
+    width: 100%; }
+
+/*ESTILOS DE LAS CARDS DE INDEX*/
+.galery {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 100px; }
+  .galery .contenedor-card {
+    height: 300px;
+    width: 300px;
+    margin-left: 50px; }
+    .galery .contenedor-card .banner-cards {
+      height: 20%;
+      width: 100%;
+      background-color: #f17272;
+      color: blanchedalmond;
+      text-align: center; }
+      .galery .contenedor-card .banner-cards h5 {
+        padding-top: 10px; }
+    .galery .contenedor-card .contenedor-img {
+      height: 80%;
+      width: 100%; }
+      .galery .contenedor-card .contenedor-img img {
+        height: 100%;
+        width: 100%; }
+
+.banner-oferta-bottom {
+  margin-top: 100px;
+  width: 100%; }
+  .banner-oferta-bottom img {
+    width: 100%; }
+
 .divInicio {
-  height: 50%;
+  height: 400px;
   width: 100%; }
   .divInicio__Img {
     height: 100%;
@@ -37,11 +120,11 @@ main {
     position: absolute;
     text-align: right;
     color: whitesmoke;
-    top: 400px;
+    top: 360px;
     right: 40px; }
   .divInicio__Link {
     position: absolute;
-    top: 550px;
+    top: 480px;
     right: 160px;
     border-radius: 25px;
     background-color: #e72121;
@@ -177,8 +260,6 @@ div p {
 /*Media query*/
 /*768 PIXELES*/
 @media only screen and (max-width: 768px) {
-  .logo {
-    height: 80px; }
   .sectionProductos {
     grid-template-areas: "section"  "section" "section"  "section" "section" "section";
     grid-template-columns: 48%;
@@ -200,10 +281,19 @@ div p {
   .historiaFondo {
     height: 400vh; } }
 
+.banner-bottom h3 {
+  font-size: 30px; }
+
 /*600 PIXELES*/
 @media only screen and (max-width: 600px) {
+  .logo {
+    height: 80px; }
   .mainInicio {
-    height: 700px; }
+    height: 1500px; }
+  .banner-bottom .banner-bottom__img {
+    margin-top: 50px;
+    height: 400px;
+    width: 100%; }
   .divInicio__Img {
     height: 80%;
     width: 100%; }
@@ -217,17 +307,82 @@ div p {
     font-size: 15px;
     padding: 5px; }
   main {
-    height: 200vh; }
-  .navbar {
-    z-index: 2; }
-    .navbar .ul-desplegable {
-      position: absolute;
-      top: 100px;
-      left: 0px;
-      background-color: #f8f9fa;
+    background-color: #ececec; }
+    main h2 {
+      font-size: 24px; }
+    main div {
       width: 100%; }
-      .navbar .ul-desplegable ul {
-        padding-left: 20px; }
+      main div .img-banner {
+        height: 300px;
+        width: 100%; }
+      main div h1 {
+        position: absolute;
+        text-align: right;
+        color: whitesmoke;
+        top: 200px;
+        right: 20px;
+        font-size: 18px; }
+      main div .boton-compra {
+        z-index: 1;
+        position: absolute;
+        top: 250px;
+        right: 70px;
+        border-radius: 15px;
+        background-color: #e72121;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center; }
+      main div .boton-compra:hover {
+        background-color: #f18585;
+        text-decoration: none;
+        color: white; }
+  .logo {
+    height: 80px; }
+  .galery {
+    display: flex;
+    margin-left: 5px;
+    margin-top: 50px; }
+    .galery .contenedor-card {
+      height: 200px;
+      width: 200px;
+      margin-left: 0px;
+      margin-right: 5px; }
+      .galery .contenedor-card .banner-cards {
+        height: 20%;
+        width: 100%;
+        background-color: #f17272;
+        color: blanchedalmond;
+        text-align: center; }
+        .galery .contenedor-card .banner-cards h5 {
+          padding-top: 10px; }
+      .galery .contenedor-card .contenedor-img {
+        height: 80%;
+        width: 100%; }
+        .galery .contenedor-card .contenedor-img img {
+          height: 100%;
+          width: 100%; }
+  .banner-oferta-bottom {
+    margin-top: 100px;
+    width: 100%; }
+    .banner-oferta-bottom img {
+      width: 100%; }
+  .banner-bottom h3 {
+    font-size: 15px;
+    position: absolute;
+    top: 1300px;
+    right: 10px;
+    z-index: 2;
+    color: white; }
+  .banner-bottom .banner-bottom__boton {
+    position: absolute;
+    background-color: #f17272;
+    border-radius: 20px;
+    padding: 10px;
+    top: 1400px;
+    right: 30px;
+    color: white; }
   .historiaFondo__Texto {
     font-size: 14px;
     font-weight: bold;
