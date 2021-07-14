@@ -22,6 +22,12 @@ a:link, a:visited {
 main {
     background-color: rgb(236, 236, 236);
     height: 200vh;
+    h2 {
+        padding: 50px;
+        background-color: rgb(243, 243, 232);
+        text-align: center;
+        color: rgb(112, 106, 106);
+    }
 }
 
 
@@ -110,15 +116,15 @@ color: white;
 
 .banner-bottom__img {
 margin-top: 50px;
-height: 700px;
+height: 500px;
 width: 100%;
 }
 }
 /*ESTILOS DE LAS CARDS DE INDEX*/
 .galery {
 display: flex;
-margin-left: 50px;
-margin-top: 100px;
+margin-left: 9%;
+margin-top: 10px;
 .contenedor-card {
 height: 300px;
 width: 300px;
@@ -156,7 +162,7 @@ width: 100%;
 
 .divInicio {
     
-    height: 400px;
+    height: 650px;
     width: 100%;
     
 
@@ -328,6 +334,30 @@ div p{
    
 }
 
+.fotoMapa{
+    
+    height: 100%;
+    
+   &__Img{
+       position: absolute;
+       width: 400px;
+       height: 700PX;
+       margin-left: 5%;
+
+    }
+    
+    &__Mapa{
+        position: absolute;
+        width: 700PX;
+        height: 700PX;
+        right: 180px;
+        margin-left: 5%;
+       
+    }
+
+
+}
+
 .tabla {
 
     border-collapse: separate;
@@ -347,11 +377,7 @@ div p{
     
 }
 
-.imgHistoria {
-    margin-left: 50px;
-    height: 400px;
-    width: 200px;
-}
+
 
 
 
@@ -440,7 +466,9 @@ div p{
 @media only screen and (max-width: 768px) {
 
     
-
+    main h2{
+        font-size: 24px;
+    }
 
     .sectionProductos {
        
@@ -500,16 +528,18 @@ div p{
         }
 
     }
+
+ 
 /*600 PIXELES*/
 
 @media only screen and (max-width: 600px) {
-
+    
     .logo {
         height: 80px;
     }
 
     .mainInicio{
-        height: 1500px;
+        height: 1600px;
     }
     .banner-bottom{
     .banner-bottom__img {
@@ -521,7 +551,7 @@ div p{
     .divInicio {
     
         
-        
+        height: 500px;
     
         &__Img {
             height: 80%;
@@ -596,7 +626,7 @@ div p{
     .galery {
             display: flex;
             margin-left: 5px;
-            margin-top: 50px;
+            margin-top: 5px;
             .contenedor-card {
                 height: 200px;
                 width: 200px;
@@ -733,7 +763,9 @@ div p{
    
     /*Botonera de Inicio*/
    
-    
+    .galery {
+        margin-left: 5px;
+    }
    
 
     
