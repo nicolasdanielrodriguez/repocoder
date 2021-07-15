@@ -8,22 +8,8 @@
 
 /*Botonera de Inicio*/
 
-.navbar {
-    z-index: 2;
 
-    .ul-desplegable {
-        position: absolute;
-        top: 100px;
-        left: 0px;
-        background-color: #f8f9fa;
-        width: 100%;
 
-        ul{
-            padding-left: 20px;
-        }
-        
-    }
-}
 
 .mainInicio{
     height: 2000px;
@@ -556,7 +542,28 @@ div p{
 @media only screen and (max-width: 992px) {
    
     /*Botonera de Inicio*/
-   
+    
+    .logo {
+        height: 80px;
+    }
+
+.navbar {
+    z-index: 2;
+
+    .ul-desplegable {
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        background-color: #f8f9fa;
+        width: 100%;
+
+        ul{
+            padding-left: 20px;
+        }
+        
+    }
+}
+
     .galery {
         margin-left: 5px;
     }
@@ -617,9 +624,7 @@ div p{
      
      }
 
-    .logo {
-        height: 80px;
-    }
+    
 
     .mainInicio{
         height: 1600px;
