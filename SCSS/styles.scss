@@ -340,17 +340,17 @@ div p{
     
    &__Img{
        position: absolute;
-       width: 400px;
-       height: 700PX;
+       width: 25%;
+       height: 90%;
        margin-left: 5%;
 
     }
     
     &__Mapa{
         position: absolute;
-        width: 700PX;
-        height: 700PX;
-        right: 180px;
+        width: 55%;
+        height: 90%;
+        right: 10px;
         margin-left: 5%;
        
     }
@@ -362,6 +362,8 @@ div p{
 
     border-collapse: separate;
     border: 5px solid; 
+    margin-left: auto;
+    margin-right: auto;
 
     &__FilaUno{
 
@@ -517,7 +519,7 @@ div p{
 
 
 .historiaFondo {
-    height: 400vh;
+    height: 350vh;
 }
 }
 
@@ -530,10 +532,73 @@ div p{
     }
 
  
+
+/*992 PIXELES*/
+
+@media only screen and (max-width: 992px) {
+   
+    /*Botonera de Inicio*/
+   
+    .galery {
+        margin-left: 5px;
+    }
+   
+
+    .fotoMapa{
+    
+       
+        
+       &__Img{
+           
+           width: 30%;
+           height: 70%;
+           
+    
+        }
+        
+        &__Mapa{
+            
+            width: 50%;
+            height: 70%;
+            right: 10px;
+           
+           
+        }
+    
+    
+    }
+
+}
 /*600 PIXELES*/
 
 @media only screen and (max-width: 600px) {
     
+    .fotoMapa{
+    
+       
+        
+        &__Img{
+            
+            width: 70%;
+            height: 70%;
+            right: 100px;
+    
+            
+     
+         }
+         
+         &__Mapa{
+             
+             width: 70%;
+             height: 70%;
+             top: 1700px;
+            right: 100px;
+            
+         }
+     
+     
+     }
+
     .logo {
         height: 80px;
     }
@@ -757,17 +822,4 @@ div p{
  }
  
  
-/*992 PIXELES*/
-
-@media only screen and (max-width: 992px) {
-   
-    /*Botonera de Inicio*/
-   
-    .galery {
-        margin-left: 5px;
-    }
-   
-
-    
-
-}
+ 

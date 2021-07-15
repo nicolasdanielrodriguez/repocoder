@@ -210,19 +210,21 @@ div p {
   height: 100%; }
   .fotoMapa__Img {
     position: absolute;
-    width: 400px;
-    height: 700PX;
+    width: 25%;
+    height: 90%;
     margin-left: 5%; }
   .fotoMapa__Mapa {
     position: absolute;
-    width: 700PX;
-    height: 700PX;
-    right: 180px;
+    width: 55%;
+    height: 90%;
+    right: 10px;
     margin-left: 5%; }
 
 .tabla {
   border-collapse: separate;
-  border: 5px solid; }
+  border: 5px solid;
+  margin-left: auto;
+  margin-right: auto; }
   .tabla__FilaUno {
     background-color: rgba(253, 0, 0, 0.068); }
   .tabla__FilaDos {
@@ -295,13 +297,35 @@ div p {
       width: 80%;
       height: 60%; }
   .historiaFondo {
-    height: 400vh; } }
+    height: 350vh; } }
 
 .banner-bottom h3 {
   font-size: 30px; }
 
+/*992 PIXELES*/
+@media only screen and (max-width: 992px) {
+  /*Botonera de Inicio*/
+  .galery {
+    margin-left: 5px; }
+  .fotoMapa__Img {
+    width: 30%;
+    height: 70%; }
+  .fotoMapa__Mapa {
+    width: 50%;
+    height: 70%;
+    right: 10px; } }
+
 /*600 PIXELES*/
 @media only screen and (max-width: 600px) {
+  .fotoMapa__Img {
+    width: 70%;
+    height: 70%;
+    right: 100px; }
+  .fotoMapa__Mapa {
+    width: 70%;
+    height: 70%;
+    top: 1700px;
+    right: 100px; }
   .logo {
     height: 80px; }
   .mainInicio {
@@ -427,9 +451,3 @@ div p {
     .recetas__Img {
       height: 40%;
       width: 80%; } }
-
-/*992 PIXELES*/
-@media only screen and (max-width: 992px) {
-  /*Botonera de Inicio*/
-  .galery {
-    margin-left: 5px; } }
