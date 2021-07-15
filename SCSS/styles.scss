@@ -8,6 +8,23 @@
 
 /*Botonera de Inicio*/
 
+.navbar {
+    z-index: 2;
+
+    .ul-desplegable {
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        background-color: #f8f9fa;
+        width: 100%;
+
+        ul{
+            padding-left: 20px;
+        }
+        
+    }
+}
+
 .mainInicio{
     height: 2000px;
 }
@@ -169,6 +186,7 @@ width: 100%;
     &__Img {
         height: 100%;
         width: 100%;
+        position: absolute;
 
     }
 
@@ -615,12 +633,13 @@ div p{
     }
     .divInicio {
     
-        
-        height: 500px;
+        height: 300px;
+       
     
         &__Img {
-            height: 80%;
+            
             width: 100%;
+            height: 300px;
     
         }
         &__Titulo {
