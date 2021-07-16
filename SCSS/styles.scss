@@ -38,8 +38,8 @@ main {
 
     color: $colorletra;
     font-size: $tamañoletra;
-    font-family: 'Dancing Script', cursive;
-
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    
     
     
 }
@@ -49,6 +49,7 @@ main {
     
     @include titulos(black, 300%);
     padding-top: 50px;
+    padding-left: 20px;
 }
 
 .subtituloH2 {
@@ -242,7 +243,7 @@ width: 100%;
 
     &__Titulo{
 
-        font-family: 'Limelight', cursive;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     }
 
@@ -274,6 +275,10 @@ width: 100%;
 
 /*Sección Recetas*/
 
+.mainRecetas {
+    height: 300vh;
+}
+
 .recetas {
     display: grid;
     grid-template-areas: 
@@ -288,14 +293,14 @@ width: 100%;
 
     &__Div {
         
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     font-size: 20px;
 
     }
 
     &__Titulo{
-        font-family: 'Limelight', cursive;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
     &__Img {
@@ -310,21 +315,44 @@ width: 100%;
     &__Enlace{
        
 
-            border: 1px solid #5e4f4f;
+            border: 1px solid #6d0101;
         
-            background-color: #615e6e; 
+            background-color: #7c0606; 
         
             color: #ffffff; 
         
             text-decoration: none; 
         
-            font-size: 100%;
+            font-size: 90%;
         
             border-radius: 10px;
 
-            width: 60%;
+            width: 20%;
+
+           
+
+          
             
     }
+}
+
+.recetasTodas{
+
+    width: 100%;
+
+    &__Titulo{
+        position: absolute;
+        top: 1500px;
+        color: white;
+    }
+
+    &__Img{
+        height: 750px;
+        width: 100%;
+        
+    }    
+
+    
 }
 
 
@@ -465,76 +493,6 @@ div p{
 
 /*Media query*/
 
-
-
-/*768 PIXELES*/
-
-@media only screen and (max-width: 768px) {
-
-    
-    main h2{
-        font-size: 24px;
-    }
-
-    .sectionProductos {
-       
-        grid-template-areas: 
-                            "section" 
-                            "section"
-                            "section" 
-                            "section"
-                            "section"
-                            "section";
-
-        grid-template-columns: 48% ;
-        grid-template-rows: 45% 45% 45% 45% 45% 45%;
-
-        &__Img {
-            width: 100%;
-            height: 60%;
-        }
-    }
-
-    .tamañoMainProductos {
-        height: 600vh;
-    }
-
-    .mainRecetas {
-        height: 400vh;
-    }
- 
-    .recetas {
-       
-        grid-template-areas: 
-                            "section" 
-                            "section"
-                            "section" 
-                            "section";
-
-        grid-template-columns: 48% ;
-        grid-template-rows: 45% 45% 45% 45%;
-        
-    &__Img {
-        width: 80%;
-        height: 60%;
-    }
-  
-}
-
-
-.historiaFondo {
-    height: 350vh;
-}
-}
-
-.banner-bottom{
-    h3 {
-        font-size: 30px;
-        
-        }
-
-    }
-
  
 
 /*992 PIXELES*/
@@ -594,9 +552,112 @@ div p{
     }
 
 }
+
+
+/*768 PIXELES*/
+
+@media only screen and (max-width: 768px) {
+
+    
+    main h2{
+        font-size: 24px;
+    }
+
+    .sectionProductos {
+       
+        grid-template-areas: 
+                            "section" 
+                            "section"
+                            "section" 
+                            "section"
+                            "section"
+                            "section";
+
+        grid-template-columns: 48% ;
+        grid-template-rows: 45% 45% 45% 45% 45% 45%;
+
+        &__Img {
+            width: 100%;
+            height: 60%;
+        }
+    }
+
+    .tamañoMainProductos {
+        height: 600vh;
+    }
+
+    .mainRecetas {
+        height: 400vh;
+    }
+
+    .recetasTodas{
+
+        width: 100%;
+    
+        &__Titulo{
+            z-index: 1;
+            position: absolute;
+            top: 2600px;
+            color: white;
+        }
+    
+        &__Img{
+            height: 750px;
+            width: 100%;
+            position: absolute;
+            top: 2200px;
+            
+        }    
+    
+        
+    }
+    .recetas {
+       
+        grid-template-areas: 
+                            "section" 
+                            "section"
+                            "section" 
+                            "section";
+
+        grid-template-columns: 48% ;
+        grid-template-rows: 45% 45% 45% 45%;
+        
+    &__Img {
+        width: 80%;
+        height: 60%;
+    }
+
+  
+}
+
+
+.historiaFondo {
+    height: 350vh;
+}
+}
+
+.banner-bottom{
+    h3 {
+        font-size: 30px;
+        
+        }
+
+    }
+
+ 
 /*600 PIXELES*/
 
 @media only screen and (max-width: 600px) {
+
+    .recetas{
+        &__Div{
+            font-size: 16px;
+        }
+
+        &__Enlace{
+            width: 80px;
+        }
+    }
     
     .fotoMapa{
     
@@ -616,7 +677,7 @@ div p{
              
              width: 70%;
              height: 70%;
-             top: 1700px;
+             top: 1900px;
             right: 100px;
             
          }
@@ -824,7 +885,7 @@ div p{
          }
      }
      .mainRecetas {
-         height: 250vh ;
+         height: 220vh ;
      }
      .recetas {
  
@@ -840,8 +901,25 @@ div p{
      
          width: 80%;
          
+         top: 1800px;
         
          }
+
+         
+     }
+
+     .recetasTodas{
+
+        &__Titulo{
+            top: 1600px;
+            font-size: 20px;
+        }
+
+        &__Img{
+        height: 400px;
+
+        top: 1300px;
+        }
      }
  }
  
