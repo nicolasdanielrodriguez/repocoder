@@ -232,7 +232,7 @@ div p {
     background-color: rgba(255, 17, 0, 0.062); }
 
 .historiaFondo {
-  height: 250vh; }
+  height: 290vh; }
   .historiaFondo__Texto {
     font-size: 18px;
     font-weight: bold;
@@ -436,12 +436,14 @@ div p {
     top: 1400px;
     right: 30px;
     color: white; }
-  .historiaFondo__Texto {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: justify;
-    margin-block-start: 0%;
-    text-indent: 5%; }
+  .historiaFondo {
+    height: 380vh; }
+    .historiaFondo__Texto {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: justify;
+      margin-block-start: 0%;
+      text-indent: 5%; }
   .tamañoMainProductos {
     height: 2800px; }
   .sectionProductos__Div {
