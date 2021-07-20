@@ -36,52 +36,26 @@ main {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
 
 /*Sección Index*/
-.img-banner {
-  height: 600px;
-  width: 100%; }
-
-h1 {
-  text-align: left;
-  color: white;
-  top: 10px;
-  right: 50px;
-  font-weight: bolder; }
-
-.boton-compra {
-  position: absolute;
-  top: 3150px;
-  right: 150px;
-  border-radius: 25px;
-  background-color: #e72121;
-  color: white;
-  padding: 20px;
-  text-decoration: none; }
-
-.boton-compra:hover {
-  background-color: #f18585;
-  text-decoration: none;
-  color: white; }
-
 .banner-bottom {
   display: flex;
   align-content: center;
   justify-content: center; }
-  .banner-bottom h3 {
+  .banner-bottom__H3 {
     font-size: 50px;
     position: absolute;
-    top: 1800px;
+    top: 1700px;
     right: 120px;
     z-index: 2;
     color: white; }
-  .banner-bottom .banner-bottom__boton {
+  .banner-bottom__Boton {
     position: absolute;
     background-color: #f17272;
     border-radius: 20px;
     padding: 10px;
-    top: 1950px;
+    top: 1900px;
     right: 200px;
     color: white; }
-  .banner-bottom .banner-bottom__img {
+  .banner-bottom__Img {
     margin-top: 50px;
     height: 500px;
     width: 100%; }
@@ -120,7 +94,7 @@ h1 {
   height: 650px;
   width: 100%; }
   .divInicio__Img {
-    height: 100%;
+    height: 30%;
     width: 100%;
     position: absolute; }
   .divInicio__Titulo {
@@ -156,64 +130,63 @@ h1 {
   grid-template-areas: "div div div" "div div";
   grid-template-columns: 40% 40%;
   grid-template-rows: 30% 30% 30%;
-  height: 1000px;
+  height: 1300px;
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   justify-content: center;
   justify-items: center; }
+  .sectionProductos__Div {
+    border: 2px black solid;
+    height: 500px; }
   .sectionProductos__Titulo {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: salmon; }
   .sectionProductos__Img {
-    width: 60%;
-    height: 60%; }
+    width: 100%;
+    height: 50%; }
   .sectionProductos__Boton {
+    z-index: 1;
     border: 1px solid #bb1515;
     background-color: #8a1b1b;
     color: #ffffff;
     text-decoration: none;
     font-size: 100%;
-    border-radius: 20px; }
+    margin-left: 20px; }
 
 /*Sección Recetas*/
 .mainRecetas {
   height: 300vh; }
 
-.recetas {
-  display: grid;
-  grid-template-areas: "section section" "section section";
-  grid-template-columns: 48% 48%;
-  grid-template-rows: 45% 45%;
-  height: 1000px;
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
-  justify-content: center; }
-  .recetas__Div {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px; }
-  .recetas__Titulo {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-  .recetas__Img {
-    height: 70%;
-    width: 90%;
-    border-radius: 30px; }
-  .recetas__Enlace {
-    border: 1px solid #6d0101;
-    background-color: #7c0606;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 90%;
-    border-radius: 10px;
-    width: 20%; }
+.recetaBoton {
+  z-index: 2;
+  position: absolute;
+  font-size: 25px;
+  border-radius: 25px;
+  background-color: #e72121;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  width: 180px;
+  top: 700px;
+  right: 200px; }
 
-.recetasTodas {
-  width: 100%; }
-  .recetasTodas__Titulo {
-    position: absolute;
-    top: 1500px;
-    color: white; }
-  .recetasTodas__Img {
-    height: 750px;
-    width: 100%; }
+.w-100 {
+  width: 90%;
+  height: 700px; }
+
+.historiaChef {
+  display: flex; }
+  .historiaChef__Div {
+    width: 50%; }
+  .historiaChef__P {
+    font-size: 30px;
+    padding: 10px;
+    text-align: justify;
+    margin-left: 50px;
+    font-weight: bold; }
+  .historiaChef__I {
+    height: 90%;
+    width: 80%; }
 
 /*Sección Historia*/
 div p {
@@ -221,19 +194,18 @@ div p {
   flex-direction: column;
   align-content: center; }
 
-.fotoMapa {
-  height: 100%; }
-  .fotoMapa__Img {
-    position: absolute;
-    width: 25%;
-    height: 90%;
-    margin-left: 5%; }
-  .fotoMapa__Mapa {
-    position: absolute;
-    width: 55%;
-    height: 90%;
-    right: 10px;
-    margin-left: 5%; }
+.fotoMapa__Img {
+  position: absolute;
+  width: 25%;
+  height: 30%;
+  margin-left: 5%; }
+
+.fotoMapa__Mapa {
+  position: absolute;
+  width: 55%;
+  height: 30%;
+  right: 10px;
+  margin-left: 5%; }
 
 .tabla {
   border-collapse: separate;
@@ -252,7 +224,9 @@ div p {
     font-weight: bold;
     text-align: justify;
     margin-block-start: 0%;
-    text-indent: 5%; }
+    text-indent: 5%;
+    margin-left: 5%;
+    margin-right: 5%; }
 
 /*Características footer*/
 .footer {
@@ -261,32 +235,30 @@ div p {
   color: white;
   height: 150px;
   align-items: center; }
-  .footer .div-footer1 {
+  .footer__Redes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
     margin-left: 40px; }
-    .footer .div-footer1 ul {
+    .footer__Redes ul {
       list-style: none;
       text-align: center; }
-  .footer .div-footer2 {
+  .footer__Bancos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
     margin-left: 40px; }
-    .footer .div-footer2 ul {
+    .footer__Bancos ul {
       list-style: none;
       text-align: left; }
 
 /*Características contacto*/
-.divContacto {
-  display: flex;
-  flex-direction: column; }
-  .divContacto__Img {
-    height: 80px;
-    width: 100px; }
+.imgMensajes {
+  margin-top: 50px;
+  height: 200px;
+  width: 200px; }
 
 /*Media query*/
 /*992 PIXELES*/
@@ -308,11 +280,16 @@ div p {
     margin-left: 5px; }
   .fotoMapa__Img {
     width: 30%;
-    height: 70%; }
+    height: 45%; }
   .fotoMapa__Mapa {
     width: 50%;
+    height: 45%;
+    right: 10px; }
+  .historiaChef__P {
+    font-size: 16px; }
+  .historiaChef__I {
     height: 70%;
-    right: 10px; } }
+    width: 90%; } }
 
 /*768 PIXELES*/
 @media only screen and (max-width: 768px) {
@@ -351,24 +328,37 @@ div p {
   .historiaFondo {
     height: 350vh; } }
 
-.banner-bottom h3 {
-  font-size: 30px; }
-
 /*600 PIXELES*/
 @media only screen and (max-width: 600px) {
+  .historiaChef__P {
+    font-size: 13px;
+    margin-left: 0px;
+    padding: 2px;
+    font-weight: bold; }
+  .historiaChef__I {
+    height: 80%;
+    width: 100%; }
   .recetas__Div {
     font-size: 16px; }
   .recetas__Enlace {
     width: 80px; }
+  .recetaBoton {
+    z-index: 2;
+    position: absolute;
+    font-size: 15px;
+    padding: 5px;
+    width: 90px;
+    top: 700px;
+    right: 100px; }
   .fotoMapa__Img {
-    width: 70%;
-    height: 70%;
-    right: 100px; }
+    width: 90%;
+    height: 30%;
+    right: 100px;
+    display: none; }
   .fotoMapa__Mapa {
-    width: 70%;
-    height: 70%;
-    top: 1900px;
-    right: 100px; }
+    width: 90%;
+    height: 30%;
+    top: 1700px; }
   .mainInicio {
     height: 1600px; }
   .banner-bottom .banner-bottom__img {
@@ -451,33 +441,34 @@ div p {
     width: 100%; }
     .banner-oferta-bottom img {
       width: 100%; }
-  .banner-bottom h3 {
-    font-size: 15px;
+  .banner-bottom__H3 {
+    font-size: 20px;
     position: absolute;
     top: 1300px;
     right: 10px;
     z-index: 2;
     color: white; }
-  .banner-bottom .banner-bottom__boton {
+  .banner-bottom__Boton {
     position: absolute;
     background-color: #f17272;
     border-radius: 20px;
     padding: 10px;
-    top: 1400px;
+    top: 1350px;
     right: 30px;
     color: white; }
   .historiaFondo {
     height: 380vh; }
     .historiaFondo__Texto {
+      margin-right: 5%;
+      margin-left: 5%;
       font-size: 14px;
       font-weight: bold;
       text-align: justify;
-      margin-block-start: 0%;
       text-indent: 5%; }
   .tamañoMainProductos {
-    height: 2800px; }
+    height: 3500px; }
   .sectionProductos__Div {
-    height: 250px; }
+    height: 350px; }
   .sectionProductos__Titulo {
     font-size: 100%; }
   .sectionProductos__img {

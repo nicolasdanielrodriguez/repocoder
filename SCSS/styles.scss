@@ -62,68 +62,40 @@ main {
 
 /*Sección Index*/
 
-.img-banner {
-    height: 600px;
-    width: 100%;
-}
-h1 {
-    
-    text-align: left;
-    color: rgb(255, 255, 255);
-    top: 10px;
-    right: 50px;
-    font-weight: bolder;
-    
-}
-.boton-compra {
-    position: absolute;
-    top: 3150px;
-    right: 150px;
-    border-radius: 25px;
-    background-color: rgb(231, 33, 33);
-    color: white;
-    padding: 20px;
-    text-decoration: none;
-   
-        
-}
 
-.boton-compra:hover {
-    background-color: rgb(241, 133, 133);
-    text-decoration: none;
-    color: white;
-}
 
 
 .banner-bottom {
 display: flex;
 align-content: center;
 justify-content: center;
-h3 {
+
+&__H3{
 font-size: 50px;
 position: absolute;
-top: 1800px;
+top: 1700px;
 right: 120px;
 z-index: 2;
 color: white;
 }
 
-.banner-bottom__boton {
+&__Boton{
 position: absolute;
 background-color: rgb(241, 114, 114);
 border-radius: 20px;
 padding: 10px;
-top: 1950px;
+top: 1900px;
 right: 200px;
 color: white;
 }
 
-.banner-bottom__img {
+&__Img {
 margin-top: 50px;
 height: 500px;
 width: 100%;
 }
 }
+
 /*ESTILOS DE LAS CARDS DE INDEX*/
 .galery {
 display: flex;
@@ -171,7 +143,7 @@ width: 100%;
     
 
     &__Img {
-        height: 100%;
+        height: 30%;
         width: 100%;
         position: absolute;
 
@@ -233,29 +205,36 @@ width: 100%;
                         "div div";
     grid-template-columns: 40% 40%;
     grid-template-rows: 30% 30% 30%;
-    height: 1000px;
+    height: 1300px;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     justify-content: center;
     justify-items: center;
+   
 
-    
+    &__Div{
+        border: 2px black solid;
+        height: 500px;
+        
+    }
 
     &__Titulo{
 
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+        background-color: salmon;
     }
 
     &__Img {
 
-        width: 60%;
+        width: 100%;
 
-        height: 60%;
+        height: 50%;
 
     }
 
     &__Boton {
+
+    z-index: 1;
 
     border: 1px solid #bb1515;
 
@@ -266,9 +245,9 @@ width: 100%;
     text-decoration: none; 
 
     font-size: 100%;
+    margin-left: 20px;
 
-    border-radius: 20px;
-
+   
     }
 }
 
@@ -279,76 +258,44 @@ width: 100%;
     height: 300vh;
 }
 
-.recetas {
-    display: grid;
-    grid-template-areas: 
-                        "section section"
-                        "section section";
-    grid-template-columns: 48% 48% ;
-    grid-template-rows: 45% 45%;
-    height: 1000px;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    justify-content: center;
-
-    &__Div {
-        
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-    font-size: 20px;
-
-    }
-
-    &__Titulo{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    &__Img {
-
-    height: 70% ;
-
-    width: 90%;
-
-    border-radius: 30px;
-
-    }
-    &__Enlace{
-       
-
-            border: 1px solid #6d0101;
-        
-            background-color: #7c0606; 
-        
-            color: #ffffff; 
-        
-            text-decoration: none; 
-        
-            font-size: 90%;
-        
-            border-radius: 10px;
-
-            width: 20%;
-
-           
-
-          
-            
-    }
+.recetaBoton {
+    z-index: 2;
+    position: absolute;
+    font-size: 25px;
+    border-radius: 25px;
+    background-color: rgb(231, 33, 33);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    width: 180px;
+    top: 700px;
+    right: 200px;
 }
 
-.recetasTodas{
+.w-100{
+    width: 90%;
+    height: 700px;
+}
 
-    width: 100%;
+.historiaChef{
+    display: flex;
 
-    &__Titulo{
-        position: absolute;
-        top: 1500px;
-        color: white;
+    &__Div{
+        width: 50%;
+    }
+    &__P{
+        font-size: 30px;
+        padding: 10px;
+        text-align: justify;
+        margin-left: 50px;
+        font-weight: bold;
+
     }
 
-    &__Img{
-        height: 750px;
-        width: 100%;
+    &__I{
+        height: 90%;
+        width: 80%;
+
         
     }    
 
@@ -368,12 +315,12 @@ div p{
 
 .fotoMapa{
     
-    height: 100%;
+   
     
    &__Img{
        position: absolute;
        width: 25%;
-       height: 90%;
+       height: 30%;
        margin-left: 5%;
 
     }
@@ -381,7 +328,7 @@ div p{
     &__Mapa{
         position: absolute;
         width: 55%;
-        height: 90%;
+        height: 30%;
         right: 10px;
         margin-left: 5%;
        
@@ -427,6 +374,8 @@ div p{
     text-align: justify;
     margin-block-start: 0%;
     text-indent: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 
     }
     
@@ -445,7 +394,7 @@ div p{
     align-items: center;
     
 
-    .div-footer1 {
+    &__Redes {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -459,7 +408,7 @@ div p{
         }
     }
 
-    .div-footer2{
+    &__Bancos{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -479,14 +428,10 @@ div p{
 
 /*Características contacto*/
 
-.divContacto {
-    display: flex;
-    flex-direction: column;
-    
-    &__Img {
-        height: 80px;
-    width: 100px;
-    }
+.imgMensajes {
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
 }
 
 
@@ -534,7 +479,7 @@ div p{
        &__Img{
            
            width: 30%;
-           height: 70%;
+           height: 45%;
            
     
         }
@@ -542,12 +487,28 @@ div p{
         &__Mapa{
             
             width: 50%;
-            height: 70%;
+            height: 45%;
             right: 10px;
            
            
         }
     
+    
+    }
+    .historiaChef{
+        
+        
+        &__P{
+            font-size: 16px;
+            
+    
+        }
+    
+        &__I{
+            height: 70%;
+            width: 90%;
+    
+        }    
     
     }
 
@@ -636,18 +597,32 @@ div p{
 }
 }
 
-.banner-bottom{
-    h3 {
-        font-size: 30px;
-        
-        }
-
-    }
-
  
 /*600 PIXELES*/
 
 @media only screen and (max-width: 600px) {
+
+    .historiaChef{
+        
+        
+        &__P{
+            font-size: 13px;
+            margin-left: 0px;
+            padding: 2px;
+            font-weight: bold;
+    
+        }
+    
+        &__I{
+            height: 80%;
+            width: 100%;
+    
+        }    
+    
+    }
+    
+
+    
 
     .recetas{
         &__Div{
@@ -659,26 +634,36 @@ div p{
         }
     }
     
+    .recetaBoton {
+        z-index: 2;
+        position: absolute;
+        font-size: 15px;
+    
+       padding: 5px;
+        width: 90px;
+        top: 700px;
+        right: 100px;
+    }
     .fotoMapa{
     
        
         
         &__Img{
             
-            width: 70%;
-            height: 70%;
+            width: 90%;
+            height: 30%;
             right: 100px;
-    
+            display: none;
             
      
          }
          
          &__Mapa{
              
-             width: 70%;
-             height: 70%;
-             top: 1900px;
-            right: 100px;
+             width: 90%;
+             height: 30%;
+             top: 1700px;
+            
             
          }
      
@@ -814,8 +799,8 @@ div p{
                  }
         }
         .banner-bottom{
-        h3 {
-            font-size: 15px;
+            &__H3{
+            font-size: 20px;
             position: absolute;
             top: 1300px;
             right: 10px;
@@ -823,12 +808,12 @@ div p{
             color: white;
             }
           
-            .banner-bottom__boton {
+            &__Boton {
             position: absolute;
             background-color: rgb(241, 114, 114);
             border-radius: 20px;
             padding: 10px;
-            top: 1400px;
+            top: 1350px;
             right: 30px;
             color: white;
             }
@@ -839,13 +824,14 @@ div p{
     
     height: 380vh;
 
-    &__Texto {
+    &__Texto{
 
-   
+    margin-right: 5%;
+    margin-left: 5%;
     font-size: 14px;
     font-weight: bold;
     text-align: justify;
-    margin-block-start: 0%;
+    
     text-indent: 5%;
 
     }
@@ -853,14 +839,14 @@ div p{
     
 }
      .tamañoMainProductos{
-         height: 2800px;
+         height: 3500px;
      }
  
      .sectionProductos {
          
 
         &__Div{
-            height: 250px;
+            height: 350px;
         }
          
          &__Titulo{
@@ -921,7 +907,8 @@ div p{
         top: 1300px;
         }
      }
- }
+    }
+
  
  
  
