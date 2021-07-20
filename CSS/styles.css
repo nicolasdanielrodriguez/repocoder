@@ -194,18 +194,16 @@ div p {
   flex-direction: column;
   align-content: center; }
 
-.fotoMapa__Img {
-  position: absolute;
-  width: 25%;
-  height: 30%;
-  margin-left: 5%; }
-
-.fotoMapa__Mapa {
-  position: absolute;
-  width: 55%;
-  height: 30%;
-  right: 10px;
-  margin-left: 5%; }
+.fotoMapa {
+  display: flex; }
+  .fotoMapa__Img {
+    width: 200px;
+    height: 500px;
+    margin-left: 10px; }
+  .fotoMapa__Mapa {
+    margin-left: 15px;
+    width: 600px;
+    height: 500px; }
 
 .tabla {
   border-collapse: separate;
@@ -264,6 +262,13 @@ div p {
 /*992 PIXELES*/
 @media only screen and (max-width: 992px) {
   /*Botonera de Inicio*/
+  .fotoMapa {
+    display: flex; }
+    .fotoMapa__Img {
+      margin-left: 5px; }
+    .fotoMapa__Mapa {
+      margin-left: 10px;
+      width: 500px; }
   .logo {
     height: 80px; }
   .navbar {
@@ -278,13 +283,6 @@ div p {
         padding-left: 20px; }
   .galery {
     margin-left: 5px; }
-  .fotoMapa__Img {
-    width: 30%;
-    height: 45%; }
-  .fotoMapa__Mapa {
-    width: 50%;
-    height: 45%;
-    right: 10px; }
   .historiaChef__P {
     font-size: 16px; }
   .historiaChef__I {
@@ -293,6 +291,10 @@ div p {
 
 /*768 PIXELES*/
 @media only screen and (max-width: 768px) {
+  .fotoMapa__Img {
+    width: 200px; }
+  .fotoMapa__Mapa {
+    width: 350px; }
   main h2 {
     font-size: 24px; }
   .sectionProductos {
@@ -351,14 +353,10 @@ div p {
     top: 700px;
     right: 100px; }
   .fotoMapa__Img {
-    width: 90%;
-    height: 30%;
-    right: 100px;
     display: none; }
   .fotoMapa__Mapa {
-    width: 90%;
-    height: 30%;
-    top: 1700px; }
+    width: 280px;
+    margin-left: auto; }
   .mainInicio {
     height: 1600px; }
   .banner-bottom .banner-bottom__img {

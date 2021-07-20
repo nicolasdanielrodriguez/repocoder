@@ -315,22 +315,22 @@ div p{
 
 .fotoMapa{
     
-   
+   display: flex;
     
    &__Img{
-       position: absolute;
-       width: 25%;
-       height: 30%;
-       margin-left: 5%;
+       
+       width: 200px;
+       height: 500px;
+       margin-left: 10px;
 
     }
     
     &__Mapa{
-        position: absolute;
-        width: 55%;
-        height: 30%;
-        right: 10px;
-        margin-left: 5%;
+        
+       margin-left: 15px;
+        width: 600px;
+        height: 500px;
+        
        
     }
 
@@ -446,6 +446,31 @@ div p{
    
     /*Botonera de Inicio*/
     
+
+    .fotoMapa{
+    
+        display: flex;
+         
+        &__Img{
+            
+            
+            
+            margin-left: 5px;
+     
+         }
+         
+         &__Mapa{
+             
+            margin-left: 10px;
+             width: 500px;
+             
+             
+            
+         }
+     
+     
+     }
+
     .logo {
         height: 80px;
     }
@@ -472,29 +497,7 @@ div p{
     }
    
 
-    .fotoMapa{
     
-       
-        
-       &__Img{
-           
-           width: 30%;
-           height: 45%;
-           
-    
-        }
-        
-        &__Mapa{
-            
-            width: 50%;
-            height: 45%;
-            right: 10px;
-           
-           
-        }
-    
-    
-    }
     .historiaChef{
         
         
@@ -519,7 +522,30 @@ div p{
 
 @media only screen and (max-width: 768px) {
 
+    .fotoMapa{
     
+       
+        
+        &__Img{
+            
+            
+            width: 200px;
+            
+     
+         }
+         
+         &__Mapa{
+             
+             
+             width: 350px;
+             
+            
+            
+         }
+     
+     
+     }
+
     main h2{
         font-size: 24px;
     }
@@ -650,9 +676,7 @@ div p{
         
         &__Img{
             
-            width: 90%;
-            height: 30%;
-            right: 100px;
+            
             display: none;
             
      
@@ -660,10 +684,8 @@ div p{
          
          &__Mapa{
              
-             width: 90%;
-             height: 30%;
-             top: 1700px;
-            
+            width: 280px;
+            margin-left: auto;
             
          }
      
