@@ -8,12 +8,18 @@
 
 /*Botonera de Inicio*/
 
+@mixin tamañoMain ($altura){
 
-
+    height: $altura;
+    
+}
 
 .mainInicio{
-    height: 2000px;
+
+    @include tamañoMain (2000px);
 }
+
+
 .logo {
     height: 160px;
 }
@@ -25,12 +31,7 @@ a:link, a:visited {
 main {
     background-color: rgb(236, 236, 236);
     height: 200vh;
-    h2 {
-        padding: 50px;
-        background-color: rgb(243, 243, 232);
-        text-align: center;
-        color: rgb(112, 106, 106);
-    }
+   
 }
 
 
@@ -53,8 +54,15 @@ main {
 }
 
 .subtituloH2 {
+
+    padding: 50px;
+    background-color: rgb(243, 243, 232);
+    text-align: center;
+    color: rgb(112, 106, 106);
+
     @extend .subtitulo;
    @include titulos(grey, 200% )
+    
 
 }
 
@@ -70,70 +78,72 @@ display: flex;
 align-content: center;
 justify-content: center;
 
-&__H3{
-font-size: 50px;
-position: absolute;
-top: 1700px;
-right: 120px;
-z-index: 2;
-color: white;
-}
-
-&__Boton{
-position: absolute;
-background-color: rgb(241, 114, 114);
-border-radius: 20px;
-padding: 10px;
-top: 1900px;
-right: 200px;
-color: white;
-}
-
-&__Img {
-margin-top: 50px;
-height: 500px;
-width: 100%;
-}
-}
-
-/*ESTILOS DE LAS CARDS DE INDEX*/
-.galery {
-display: flex;
-margin-left: 9%;
-margin-top: 10px;
-.contenedor-card {
-height: 300px;
-width: 300px;
-margin-left: 50px;
-.banner-cards {
-height: 20%;
-width: 100%;
-background-color: rgb(241, 114, 114);
-color: blanchedalmond;
-text-align: center;
-    h5 {
-        padding-top: 10px;
+    &__H3{
+        font-size: 50px;
+        position: absolute;
+        top: 1700px;
+        right: 120px;
+        z-index: 2;
+        color: white;
     }
-}
 
-.contenedor-img {
-height: 80%;
-width: 100%;
-    img {
-        height: 100%;
+    &__Boton{
+        position: absolute;
+        background-color: rgb(241, 114, 114);
+        border-radius: 20px;
+        padding: 10px;
+        top: 1900px;
+        right: 200px;
+        color: white;
+    }
+
+    &__Img {
+        margin-top: 50px;
+        height: 500px;
         width: 100%;
     }
 }
+
+/*ESTILOS DE LAS CARDS DE INDEX*/
+.galeria {
+display: flex;
+margin-left: 9%;
+margin-top: 10px;
+height: 300px;
+    &__Div {
+    height: 300px;
+    width: 300px;
+    margin-left: 50px;
+    }
+    &__Tarjeta {
+    height: 20%;
+    width: 100%;
+    background-color: rgb(241, 114, 114);
+    color: blanchedalmond;
+    text-align: center;
+        h5 {
+            padding-top: 10px;
+        }
 }
+
+    &__Img {
+        height: 80%;
+        width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+    }
 }
+
 
 .banner-oferta-bottom {
 margin-top: 100px;
 width: 100%;
-img {
+    img {
 
-width: 100%;
-}
+        width: 100%;
+    }
 }
 
 .divInicio {
@@ -198,6 +208,12 @@ width: 100%;
 
 /*Sección Productos*/
 
+.mainProductos {
+       
+
+    @include tamañoMain(2000px)
+}
+
 .sectionProductos {
     display: grid;
     grid-template-areas: 
@@ -221,8 +237,8 @@ width: 100%;
     &__Titulo{
 
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        background-color: salmon;
-        
+        background-color: rgb(199, 61, 45);
+        color: rgb(248, 248, 248);
         text-align: center;
     }
 
@@ -261,7 +277,8 @@ width: 100%;
 /*Sección Recetas*/
 
 .mainRecetas {
-    height: 300vh;
+    
+    @include tamañoMain(300vh)
 }
 
 .recetaBoton {
@@ -319,6 +336,13 @@ div p{
    
 }
 
+.mainHistoria{
+        
+
+    @include tamañoMain(2500px)
+    
+}
+
 .historiaFondo{
     display: flex;
 
@@ -326,7 +350,7 @@ div p{
         width: 50%;
     }
     &__P{
-        font-size: 30px;
+        font-size: 20px;
         padding: 10px;
         text-align: justify;
         margin-left: 50px;
@@ -346,30 +370,17 @@ div p{
 
 
   
+.mapa{
 
-.tabla {
+    width: 100%;
+    height: 50%;
 
-    border-collapse: separate;
-    border: 5px solid; 
-    margin-left: auto;
-    margin-right: auto;
-
-    &__FilaUno{
-
-        background-color: rgba(253, 0, 0, 0.068);
-        
-        
+    &__Link{
+        margin-left: 10%;
+        width: 80%;
+        height: 80%;
     }
-
-    &__FilaDos {
-
-        background-color: rgba(255, 17, 0, 0.062);
-    }
-    
 }
-
-
-
 
 
 
@@ -382,6 +393,8 @@ div p{
     color: white;
     height: 150px;
     align-items: center;
+    text-decoration: none;
+    
     
 
     &__Redes {
@@ -395,6 +408,12 @@ div p{
         ul {
             list-style: none;
             text-align: center;
+          
+
+            a{
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 
@@ -409,11 +428,36 @@ div p{
             list-style: none;
             text-align: left;
             
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
+
         }
     
     }  
 
+    &__Enlaces{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        margin-top: 20px;
+        margin-left: 40px;
+        ul{
+            list-style: none;
+            text-align: left;
+            
+            a{
+                text-decoration: none;
+                color: white;
+            }
 
+
+        }
+
+    }
 }
 
 /*Características contacto*/
@@ -463,7 +507,7 @@ div p{
     }
 }
 
-    .galery {
+    .galeria {
         margin-left: 5px;
     }
    
@@ -491,7 +535,7 @@ div p{
     
         
         &__P{
-            font-size: 30px;
+            font-size: 15px;
             padding: 10px;
             text-align: justify;
             margin-left: 10px;
@@ -520,7 +564,7 @@ div p{
     
      
 
-    main h2{
+    .subtituloH2{
         font-size: 24px;
     }
 
@@ -543,12 +587,16 @@ div p{
         }
     }
 
-    .tamañoMainProductos {
-        height: 600vh;
+    .mainProductos {
+       
+
+        @include tamañoMain(4000px)
     }
 
     .mainRecetas {
-        height: 400vh;
+    
+
+        @include tamañoMain(400vh)
     }
 
     .recetasTodas{
@@ -620,7 +668,10 @@ div p{
     }
 
     .mainHistoria{
-        height: 2200px;
+        
+
+        @include tamañoMain(2900px)
+
     }
     .historiaFondo{
         
@@ -669,7 +720,9 @@ div p{
     
 
     .mainInicio{
-        height: 1600px;
+       
+
+        @include tamañoMain(1600px)
     }
     .banner-bottom{
     .banner-bottom__img {
@@ -754,27 +807,29 @@ div p{
         }
     
     
-    .galery {
+    .galeria {
             display: flex;
             margin-left: 5px;
             margin-top: 5px;
-            .contenedor-card {
+            &__Div {
                 height: 200px;
                 width: 200px;
                 margin-left: 0px;
                 margin-right: 5px;
-                    .banner-cards {
-                        height: 20%;
-                        width: 100%;
-                        background-color: rgb(241, 114, 114);
-                        color: blanchedalmond;
-                        text-align: center;
+
+            }
+            &__Tarjeta {
+                     height: 20%;
+                    width: 100%;
+                    background-color: rgb(241, 114, 114);
+                    color: blanchedalmond;
+                    text-align: center;
                             h5 {
                                 padding-top: 10px;
                             }
                     }
         
-                    .contenedor-img {
+                    &__Img {
                         height: 80%;
                         width: 100%;
                             img {
@@ -782,7 +837,7 @@ div p{
                                 width: 100%;
                             }
                     }
-            }
+            
         }
         
         
@@ -817,8 +872,10 @@ div p{
      
 
 
-     .tamañoMainProductos{
-         height: 3500px;
+     .mainProductos{
+         
+
+         @include tamañoMain(3500px)
      }
  
      .sectionProductos {
@@ -850,7 +907,9 @@ div p{
          }
      }
      .mainRecetas {
-         height: 220vh ;
+         
+
+         @include tamañoMain(280vh)
      }
      .recetas {
  
@@ -886,7 +945,70 @@ div p{
         top: 1300px;
         }
      }
+
+
+.footer {
+
+   
+    
+    
+
+    &__Redes {
+       
+        margin-left: 5px;
+
+        ul {
+           
+          
+
+           
+            li{
+                font-size: 10px;
+            }
+        }
     }
+
+    &__Bancos{
+        
+        margin-left: 5px;
+        ul{
+            
+            
+            li{
+                font-size: 10px;
+            }
+
+
+        }
+    
+    }  
+
+    &__Enlaces{
+        
+        margin-left: 5px;
+        ul{
+            
+            
+            li{
+                font-size: 10px;
+            }
+
+
+        }
+
+    }
+}
+
+    }
+
+/*430 PIXELES*/
+
+@media only screen and (max-width: 430px) {
+
+    .mainInicio{
+        @include tamañoMain(1800px)
+    }
+}
 
  
  
