@@ -218,7 +218,7 @@ width: 100%;
     display: grid;
     grid-template-areas: 
                         "div div div"
-                        "div div";
+                        "div div " ;
     grid-template-columns: 40% 40%;
     grid-template-rows: 30% 30% 30%;
     height: 1300px;
@@ -230,8 +230,10 @@ width: 100%;
 
     &__Div{
         border: 2px black solid;
-        height: 500px;
-        
+        height: 350px;
+        width: 350px;
+      
+        margin: 10%;
     }
 
     &__Titulo{
@@ -278,7 +280,7 @@ width: 100%;
 
 .mainRecetas {
     
-    @include tamañoMain(300vh)
+    @include tamañoMain(400vh)
 }
 
 .recetaBoton {
@@ -293,6 +295,15 @@ width: 100%;
     width: 180px;
     top: 700px;
     right: 200px;
+}
+
+.botonTarjeta{
+    background-color: rgb(105, 0, 0);
+    color: white;
+
+    :hover{
+        background-color: rgb(199, 61, 45);
+    }
 }
 
 .w-100{
@@ -465,11 +476,11 @@ div p{
 .imgMensajes {
     position: -webkit-sticky;
     position: sticky;
-    top: 400px;
-    left: 1000px;
-    
-    height: 40px;
-    width: 40px;
+    top: 100px;
+    left: 2000px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
 }
 
 
@@ -554,18 +565,11 @@ div p{
     }
 
 
-}
 
+    .mainProductos {
+       
 
-/*768 PIXELES*/
-
-@media only screen and (max-width: 768px) {
-
-    
-     
-
-    .subtituloH2{
-        font-size: 24px;
+        @include tamañoMain(4000px)
     }
 
     .sectionProductos {
@@ -586,12 +590,21 @@ div p{
             height: 60%;
         }
     }
+}
 
-    .mainProductos {
-       
 
-        @include tamañoMain(4000px)
+/*768 PIXELES*/
+
+@media only screen and (max-width: 768px) {
+
+    
+     
+
+    .subtituloH2{
+        font-size: 24px;
     }
+
+    
 
     .mainRecetas {
     
@@ -909,7 +922,7 @@ div p{
      .mainRecetas {
          
 
-         @include tamañoMain(280vh)
+         @include tamañoMain(350vh)
      }
      .recetas {
  
@@ -1007,6 +1020,13 @@ div p{
 
     .mainInicio{
         @include tamañoMain(1800px)
+    }
+
+    .recetas{
+        &__Div{
+            width: 250px;
+            height: 250px;
+        }
     }
 }
 
