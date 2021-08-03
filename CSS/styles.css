@@ -6,7 +6,7 @@
 
 /*Botonera de Inicio*/
 .mainInicio {
-  height: 2000px; }
+  height: 2100px; }
 
 .logo {
   height: 160px; }
@@ -40,12 +40,13 @@ main {
   align-content: center;
   justify-content: center; }
   .banner-bottom__H3 {
-    font-size: 50px;
     position: absolute;
     top: 1700px;
     right: 120px;
     z-index: 2;
-    color: white; }
+    color: white;
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
   .banner-bottom__Boton {
     position: absolute;
     background-color: #f17272;
@@ -54,9 +55,18 @@ main {
     top: 1900px;
     right: 200px;
     color: white; }
+    .banner-bottom__Boton :hover {
+      text-decoration: none;
+      color: black; }
+  .banner-bottom a {
+    color: white;
+    text-decoration: none; }
+  .banner-bottom a:hover {
+    background-color: #f18585;
+    color: white; }
   .banner-bottom__Img {
     margin-top: 50px;
-    height: 500px;
+    height: 600px;
     width: 100%; }
 
 /*ESTILOS DE LAS CARDS DE INDEX*/
@@ -64,7 +74,8 @@ main {
   display: flex;
   margin-left: 9%;
   margin-top: 10px;
-  height: 300px; }
+  height: 300px;
+  width: 100%; }
   .galeria__Div {
     height: 300px;
     width: 300px;
@@ -107,15 +118,20 @@ main {
     position: absolute;
     top: 480px;
     right: 160px;
-    border-radius: 25px;
-    background-color: #e72121;
+    border-radius: 20px;
+    background-color: #f17878;
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none; }
     .divInicio__Link :hover {
-      background-color: #f18585;
       text-decoration: none;
-      color: white; }
+      color: black; }
+  .divInicio a {
+    color: white;
+    text-decoration: none; }
+  .divInicio a:hover {
+    background-color: #f18585;
+    color: white; }
 
 .letraLime {
   font-family: 'Limelight', cursive;
@@ -144,27 +160,36 @@ main {
     width: 350px;
     margin: 10%; }
   .sectionProductos__Titulo {
+    color: #f8f8f8;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #c73d2d;
-    color: #f8f8f8;
     text-align: center; }
   .sectionProductos__Img {
-    width: 100%;
-    height: 50%; }
+    height: 50%;
+    width: 100%; }
   .sectionProductos__P {
     margin-left: 20px; }
   .sectionProductos__Boton {
     z-index: 1;
     border: 1px solid #bb1515;
     background-color: #8a1b1b;
-    color: #ffffff;
     text-decoration: none;
+    margin-left: 20px;
+    color: #ffffff;
     font-size: 100%;
-    margin-left: 20px; }
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  .sectionProductos a {
+    color: white;
+    text-decoration: none; }
+  .sectionProductos a:hover {
+    background-color: #f18585;
+    color: white; }
 
 .envios__I {
-  width: 250px;
   height: 150px;
+  width: 250px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -172,10 +197,10 @@ main {
 
 /*Sección Recetas*/
 .mainRecetas {
-  height: 400vh; }
+  height: 300vh; }
 
 .recetaBoton {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   font-size: 25px;
   border-radius: 25px;
@@ -183,9 +208,16 @@ main {
   color: white;
   padding: 10px;
   text-decoration: none;
-  width: 180px;
   top: 700px;
   right: 200px; }
+  .recetaBoton :hover {
+    text-decoration: none;
+    color: black; }
+  .recetaBoton a {
+    color: white;
+    text-decoration: none; }
+  .recetaBoton a:hover {
+    color: white; }
 
 .botonTarjeta {
   background-color: #690000;
@@ -194,8 +226,8 @@ main {
     background-color: #c73d2d; }
 
 .w-100 {
-  width: 90%;
-  height: 700px; }
+  height: 700px;
+  width: 90%; }
 
 .historiaChef {
   display: flex; }
@@ -227,16 +259,16 @@ div p {
   grid-column-gap: 50px;
   justify-content: center; }
   .seccion__Ai {
-    width: 500px;
-    height: 300px; }
+    height: 300px;
+    width: 500px; }
     .seccion__Ai :hover {
       box-shadow: 0 0 20px #860404; }
   .seccion__Img {
-    width: 375px;
-    height: 225px; }
+    height: 225px;
+    width: 375px; }
   .seccion__Ap {
-    width: 375px;
     height: 300px;
+    width: 375px;
     margin-top: 10px; }
 
 .mainHistoria {
@@ -257,13 +289,13 @@ div p {
     width: 80%; }
 
 .mapa {
-  width: 100%;
-  height: 1000px; }
+  height: 1000px;
+  width: 100%; }
   .mapa__Link {
     margin-top: 10%;
     margin-left: 10%;
-    width: 60%;
-    height: 80%; }
+    height: 80%;
+    width: 60%; }
 
 /*Características footer*/
 .footer {
@@ -271,6 +303,7 @@ div p {
   display: flex;
   color: white;
   height: 150px;
+  width: 100%;
   align-items: center;
   text-decoration: none; }
   .footer__Redes {
@@ -314,10 +347,10 @@ div p {
 .imgMensajes {
   position: -webkit-sticky;
   position: sticky;
-  top: 100px;
+  top: 500px;
   left: 2000px;
-  width: 50px;
   height: 50px;
+  width: 50px;
   margin-right: 20px; }
 
 /*Media query*/
@@ -336,6 +369,8 @@ div p {
       width: 100%; }
       .navbar .ul-desplegable ul {
         padding-left: 20px; }
+  .mainRecetas {
+    height: 350vh; }
   .galeria {
     margin-left: 5px; }
   .historiaChef__P {
@@ -359,31 +394,31 @@ div p {
     width: 100%;
     top: 3700px; }
     .envios__I {
-      width: 250px;
-      height: 150px; }
+      height: 150px;
+      width: 250px; }
   .sectionProductos {
     grid-template-areas: "section"  "section" "section"  "section" "section" "section";
     grid-template-columns: 48%;
     grid-template-rows: 45% 45% 45% 45% 45% 45%; }
     .sectionProductos__Img {
-      width: 100%;
-      height: 60%; }
+      height: 60%;
+      width: 100%; }
   .seccion__Ai {
-    width: 400px;
-    height: 2500px; }
+    height: 2500px;
+    width: 400px; }
   .seccion__Img {
-    width: 250px;
-    height: 150px; }
+    height: 150px;
+    width: 250px; }
   .seccion__Ap {
-    width: 250px;
-    height: 150px; } }
+    height: 150px;
+    width: 250px; } }
 
 /*768 PIXELES*/
 @media only screen and (max-width: 768px) {
   .subtituloH2 {
     font-size: 24px; }
   .mainRecetas {
-    height: 400vh; }
+    height: 380vh; }
   .recetasTodas {
     width: 100%; }
     .recetasTodas__Titulo {
@@ -401,11 +436,11 @@ div p {
     grid-template-columns: 48%;
     grid-template-rows: 45% 45% 45% 45%; }
     .recetas__Img {
-      width: 80%;
-      height: 60%; }
+      height: 60%;
+      width: 80%; }
   .mapa__Link {
-    width: 80%;
-    height: 80%; } }
+    height: 80%;
+    width: 80%; } }
 
 /*600 PIXELES*/
 @media only screen and (max-width: 600px) {
@@ -417,24 +452,27 @@ div p {
   .historiaChef__I {
     height: 80%;
     width: 100%; }
+  .w-100 {
+    height: 500px;
+    width: 90%; }
   .seccion__Ai {
-    width: 200px;
-    height: 125px; }
+    height: 125px;
+    width: 200px; }
   .seccion__Img {
-    width: 180px;
-    height: 110px; }
+    height: 110px;
+    width: 180px; }
   .seccion__Ap {
-    width: 180px;
-    height: 110px; }
+    height: 110px;
+    width: 180px; }
   .mainHistoria {
     height: 2900px; }
   .historiaFondo__P {
-    font-size: 12px;
+    font-size: 8px;
     margin: 5px;
     padding: 1px;
     font-weight: normal; }
   .historiaFondo__Img {
-    height: 40%;
+    height: 80%;
     width: 100%; }
   .recetas__Div {
     font-size: 16px; }
@@ -446,19 +484,19 @@ div p {
     font-size: 15px;
     padding: 5px;
     width: 90px;
-    top: 700px;
+    top: 500px;
     right: 100px; }
   .mainInicio {
     height: 1600px; }
-  .banner-bottom .banner-bottom__img {
+  .banner-bottom .banner-bottom__Img {
     margin-top: 50px;
     height: 400px;
     width: 100%; }
   .divInicio {
     height: 300px; }
     .divInicio__Img {
-      width: 100%;
-      height: 300px; }
+      height: 300px;
+      width: 100%; }
     .divInicio__Titulo {
       font-size: 20px;
       top: 200px;
@@ -468,38 +506,6 @@ div p {
       right: 100px;
       font-size: 15px;
       padding: 5px; }
-  main {
-    background-color: #ececec; }
-    main h2 {
-      font-size: 24px; }
-    main div {
-      width: 100%; }
-      main div .img-banner {
-        height: 300px;
-        width: 100%; }
-      main div h1 {
-        position: absolute;
-        text-align: right;
-        color: whitesmoke;
-        top: 200px;
-        right: 20px;
-        font-size: 18px; }
-      main div .boton-compra {
-        z-index: 1;
-        position: absolute;
-        top: 250px;
-        right: 70px;
-        border-radius: 15px;
-        background-color: #e72121;
-        color: white;
-        padding: 10px;
-        text-decoration: none;
-        font-size: 16px;
-        text-align: center; }
-      main div .boton-compra:hover {
-        background-color: #f18585;
-        text-decoration: none;
-        color: white; }
   .logo {
     height: 80px; }
   .galeria {
@@ -557,7 +563,7 @@ div p {
   .sectionProductos__Boton {
     font-size: 60%; }
   .mainRecetas {
-    height: 350vh; }
+    height: 400vh; }
   .recetas {
     height: 600px; }
     .recetas__Titulo {
@@ -590,21 +596,26 @@ div p {
   .mainInicio {
     height: 1800px; }
   .recetas__Div {
-    width: 250px;
-    height: 250px; }
+    height: 250px;
+    width: 250px; }
+  .w-100 {
+    height: 380px;
+    width: 90%; }
+  .recetaBoton {
+    top: 400px; }
   .seccion {
     grid-row-gap: 10px;
     grid-column-gap: 20px; }
-    .seccion .seccion__Ap {
-      width: 125px;
-      height: 75px; }
-      .seccion .seccion__Ap p {
+    .seccion__Ap {
+      height: 75px;
+      width: 125px; }
+      .seccion__Ap p {
         font-size: 10px; }
-      .seccion .seccion__Ap h4 {
+      .seccion__Ap h4 {
         font-size: 15px; }
     .seccion__Ai {
-      width: 125px;
-      height: 75px; }
+      height: 75px;
+      width: 125px; }
     .seccion__Img {
-      width: 125px;
-      height: 75px; } }
+      height: 75px;
+      width: 125px; } }

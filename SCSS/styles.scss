@@ -16,7 +16,7 @@
 
 .mainInicio{
 
-    @include tamañoMain (2000px);
+    @include tamañoMain (2100px);
 }
 
 
@@ -45,6 +45,11 @@ main {
     
 }
 
+@mixin tamaños ($alto , $ancho){
+    height: $alto;
+    width: $ancho;
+}
+
 
 .subtitulo {
     
@@ -61,7 +66,7 @@ main {
     color: rgb(112, 106, 106);
 
     @extend .subtitulo;
-   @include titulos(grey, 200% )
+   @include titulos(grey, 200% );
     
 
 }
@@ -79,12 +84,14 @@ align-content: center;
 justify-content: center;
 
     &__H3{
-        font-size: 50px;
+       
         position: absolute;
         top: 1700px;
         right: 120px;
         z-index: 2;
-        color: white;
+
+        @include titulos(white, 50px);
+        
     }
 
     &__Boton{
@@ -95,12 +102,35 @@ justify-content: center;
         top: 1900px;
         right: 200px;
         color: white;
+    
+        
+          
+          :hover {
+            text-decoration: none;
+            color: black;
+          }
+         
+          
+    }
+    
+    a{
+                   
+        color: white;
+    
+        text-decoration: none;
+       
+            
     }
 
+    a:hover {
+        background-color: rgb(241, 133, 133);
+      
+        color: white;
+    }
     &__Img {
         margin-top: 50px;
-        height: 500px;
-        width: 100%;
+        @include tamaños(600px,100% );
+        
     }
 }
 
@@ -109,26 +139,28 @@ justify-content: center;
 display: flex;
 margin-left: 9%;
 margin-top: 10px;
-height: 300px;
+@include tamaños(300px, 100% );
+
     &__Div {
-    height: 300px;
-    width: 300px;
+    @include tamaños(300px, 300px );    
+    
     margin-left: 50px;
     }
     &__Tarjeta {
-    height: 20%;
-    width: 100%;
+    @include tamaños(20%,100% );    
+    
     background-color: rgb(241, 114, 114);
     color: blanchedalmond;
     text-align: center;
         h5 {
             padding-top: 10px;
         }
-}
+    }
 
     &__Img {
-        height: 80%;
-        width: 100%;
+
+        @include tamaños(80%,100% );
+        
             img {
                 height: 100%;
                 width: 100%;
@@ -148,13 +180,12 @@ width: 100%;
 
 .divInicio {
     
-    height: 650px;
-    width: 100%;
+    @include tamaños(650px, 100% );
     
 
     &__Img {
-        height: 30%;
-        width: 100%;
+
+        @include tamaños(30%,100% );
         position: absolute;
 
     }
@@ -171,21 +202,36 @@ width: 100%;
         position: absolute;
         top: 480px;
         right: 160px;
-        border-radius: 25px;
-        background-color: rgb(231, 33, 33);
+        border-radius: 20px;
+        background-color: rgb(241, 120, 120);
         color: white;
-        padding: 20px;
+        padding: 10px;
         text-decoration: none;
 
         :hover{
-            background-color: rgb(241, 133, 133);
+            
             text-decoration: none;
-            color: white;
+            color: rgb(0, 0, 0);
         }
     }
 
 
-}
+                a{
+                   
+                    color: white;
+                
+                    text-decoration: none;
+                   
+                        
+                }
+
+                a:hover {
+                    background-color: rgb(241, 133, 133);
+                  
+                    color: white;
+                }
+        }
+
 
 
 
@@ -230,25 +276,23 @@ width: 100%;
 
     &__Div{
         border: 2px black solid;
-        height: 350px;
-        width: 350px;
+
+        @include tamaños(350px,350px );
       
         margin: 10%;
     }
 
     &__Titulo{
-
+        @include titulos(rgb(248, 248, 248), 20px);
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         background-color: rgb(199, 61, 45);
-        color: rgb(248, 248, 248);
+        
         text-align: center;
     }
 
     &__Img {
-
-        width: 100%;
-
-        height: 50%;
+        @include tamaños(50%,100% );
+        
 
     }
 
@@ -264,14 +308,27 @@ width: 100%;
 
     background-color: #8a1b1b; 
 
-    color: #ffffff; 
-
     text-decoration: none; 
 
-    font-size: 100%;
+    
     margin-left: 20px;
-
+        
+    @include titulos(#ffffff, 100%);
    
+    }
+    a{
+                   
+        color: white;
+    
+        text-decoration: none;
+       
+            
+    }
+
+    a:hover {
+        background-color: rgb(241, 133, 133);
+      
+        color: white;
     }
 }
 
@@ -279,9 +336,7 @@ width: 100%;
 .envios{
    
    &__I{ 
-
-    width: 250px;
-    height: 150px;
+    @include tamaños(150px,250px );
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -293,11 +348,11 @@ width: 100%;
 
 .mainRecetas {
     
-    @include tamañoMain(400vh)
+    @include tamañoMain(300vh)
 }
 
 .recetaBoton {
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     font-size: 25px;
     border-radius: 25px;
@@ -305,10 +360,35 @@ width: 100%;
     color: white;
     padding: 10px;
     text-decoration: none;
-    width: 180px;
+   
     top: 700px;
     right: 200px;
+
+           
+    :hover {
+        text-decoration: none;
+        color: black;
+       
+      }
+      a{
+               
+        color: white;
+    
+        text-decoration: none;
+       
+            
+    }
+    
+    a:hover {
+        
+      
+        color: white;
+    
+    }
+      
 }
+
+
 
 .botonTarjeta{
     background-color: rgb(105, 0, 0);
@@ -320,8 +400,8 @@ width: 100%;
 }
 
 .w-100{
-    width: 90%;
-    height: 700px;
+    @include tamaños(700px,90% );
+   
 }
 
 .historiaChef{
@@ -340,9 +420,9 @@ width: 100%;
     }
 
     &__I{
-        height: 90%;
-        width: 80%;
 
+        @include tamaños(90%,80% );
+        
         
     }    
 
@@ -373,22 +453,22 @@ div p{
     justify-content: center;
     
     &__Ai{
-        width: 500px;
-        height: 300px;
+        @include tamaños(300px,500px );
+       
         :hover{
             box-shadow: 0 0 20px rgb(134, 4, 4);;
         }
     }
 
     &__Img{
-        width: 375px;
-        height: 225px;
+        @include tamaños(225px,375px );
+        
         
     }
 
     &__Ap{
-        width: 375px;
-        height: 300px;
+        @include tamaños(300px, 375px );
+       
         margin-top: 10px;
     }
 
@@ -418,8 +498,9 @@ div p{
     }
 
     &__Img{
-        height: 90%;
-        width: 80%;
+
+        @include tamaños(90%,80% );
+        
 
         
     }    
@@ -430,15 +511,14 @@ div p{
 
   
 .mapa{
-
-    width: 100%;
-    height: 1000px;
+    @include tamaños(1000px,100% );
+    
 
     &__Link{
         margin-top: 10%;
         margin-left: 10%;
-        width: 60%;
-        height: 80%;
+        @include tamaños(80%,60% );
+        
     }
 }
 
@@ -451,7 +531,7 @@ div p{
     background-color: rgb(27, 25, 25);
     display: flex;
     color: white;
-    height: 150px;
+    @include tamaños(150px,100% );
     align-items: center;
     text-decoration: none;
     
@@ -525,10 +605,9 @@ div p{
 .imgMensajes {
     position: -webkit-sticky;
     position: sticky;
-    top: 100px;
+    top: 500px;
     left: 2000px;
-    width: 50px;
-    height: 50px;
+    @include tamaños(50px,50px );
     margin-right: 20px;
 }
 
@@ -567,6 +646,11 @@ div p{
     }
 }
 
+
+.mainRecetas {
+    
+    @include tamañoMain(350vh)
+}
     .galeria {
         margin-left: 5px;
     }
@@ -583,9 +667,9 @@ div p{
         }
     
         &__I{
-            height: 70%;
-            width: 90%;
-    
+
+            @include tamaños(70%,90% );
+            
         }    
     
     }
@@ -604,8 +688,9 @@ div p{
         }
     
         &__Img{
-            height: 70%;
-            width: 80%;
+
+            @include tamaños(70%,80% )
+           
     
             
         }    
@@ -630,9 +715,8 @@ div p{
 
    top: 3700px;
     &__I{ 
- 
-     width: 250px;
-     height: 150px;
+        
+        @include tamaños(150px,250px );
      
   
     }
@@ -652,8 +736,8 @@ div p{
         grid-template-rows: 45% 45% 45% 45% 45% 45%;
 
         &__Img {
-            width: 100%;
-            height: 60%;
+            @include tamaños(60%,100% );
+            
         }
     }
 
@@ -661,20 +745,21 @@ div p{
        
         
         &__Ai{
-            width: 400px;
-            height: 2500px;
+            @include tamaños(2500px,400px );
+            
             
         }
     
         &__Img{
-            width: 250px;
-            height: 150px;
+            @include tamaños(150px,250px );
+            
             
         }
     
         &__Ap{
-            width: 250px;
-            height: 150px;
+
+            @include tamaños(150px, 250px)
+            
            
         }
     
@@ -702,7 +787,7 @@ div p{
     .mainRecetas {
     
 
-        @include tamañoMain(400vh)
+        @include tamañoMain(380vh)
     }
 
     .recetasTodas{
@@ -717,8 +802,7 @@ div p{
         }
     
         &__Img{
-            height: 750px;
-            width: 100%;
+            @include tamaños(750px,100% );
             position: absolute;
             top: 2200px;
             
@@ -738,8 +822,8 @@ div p{
         grid-template-rows: 45% 45% 45% 45%;
         
     &__Img {
-        width: 80%;
-        height: 60%;
+        @include tamaños(60%,80% );
+        
     }
 
   
@@ -750,9 +834,8 @@ div p{
         
     
     &__Link{
+        @include tamaños(80%,80% );
         
-        width: 80%;
-        height: 80%;
     }
 }
 
@@ -777,31 +860,37 @@ div p{
         }
     
         &__I{
-            height: 80%;
-            width: 100%;
+
+            @include tamaños(80%,100% );
+            
     
         }    
     
     }
 
+    .w-100{
+    @include tamaños(500px,90% );
+   
+    }
+    
+
     .seccion{
        
         
         &__Ai{
-            width: 200px;
-            height: 125px;
+            @include tamaños(125px,200px );
+            
             
         }
     
         &__Img{
-            width: 180px;
-            height: 110px;
+            @include tamaños(110px,180px );
+            
             
         }
     
         &__Ap{
-            width: 180px;
-            height: 110px;
+            @include tamaños(110px,180px );
             
            
         }
@@ -820,7 +909,7 @@ div p{
        
         
         &__P{
-            font-size: 12px;
+            font-size: 8px;
             margin: 5px;
             padding: 1px;
             font-weight: normal;
@@ -828,8 +917,8 @@ div p{
         }
     
         &__Img{
-            height: 40%;
-            width: 100%;
+            @include tamaños(80%,100% );
+            
     
         }    
     
@@ -854,7 +943,7 @@ div p{
     
        padding: 5px;
         width: 90px;
-        top: 700px;
+        top: 500px;
         right: 100px;
     }
     
@@ -867,21 +956,23 @@ div p{
         @include tamañoMain(1600px)
     }
     .banner-bottom{
-    .banner-bottom__img {
+    .banner-bottom__Img {
         margin-top: 50px;
-        height: 400px;
-        width: 100%;
+        @include tamaños(400px,100% );
+       
         }
     }
     .divInicio {
-    
-        height: 300px;
+        
+        @include tamañoMain(300px);
+      
        
     
         &__Img {
+
+            @include tamaños(300px,100% );
             
-            width: 100%;
-            height: 300px;
+           
     
         }
         &__Titulo {
@@ -899,49 +990,7 @@ div p{
             padding: 5px;
     }
     }
-    main {
-        
-        background-color: rgb(236, 236, 236);
-            h2 {
-                font-size: 24px;
-            }
-            div {
-                width: 100%;
-                    .img-banner {
-                        height: 300px;
-                        width: 100%;
-                    }
-                    h1 {
-                        position: absolute;
-                        text-align: right;
-                        color: whitesmoke;
-                        top: 200px;
-                        right: 20px;
-                        font-size: 18px;
-                        
-                    }
-                    .boton-compra {
-                        z-index: 1;
-                        position: absolute;
-                        top: 250px;
-                        right: 70px;
-                        border-radius: 15px;
-                        background-color: rgb(231, 33, 33);
-                        color: white;
-                        padding: 10px;
-                        text-decoration: none;
-                        font-size: 16px;
-                        text-align: center;
-                            
-                    }
-    
-                    .boton-compra:hover {
-                        background-color: rgb(241, 133, 133);
-                        text-decoration: none;
-                        color: white;
-                    }
-            }
-    }
+   
     
    
     .logo {
@@ -954,15 +1003,13 @@ div p{
             margin-left: 5px;
             margin-top: 5px;
             &__Div {
-                height: 200px;
-                width: 200px;
+                @include tamaños(200px,200px );
                 margin-left: 0px;
                 margin-right: 5px;
 
             }
             &__Tarjeta {
-                     height: 20%;
-                    width: 100%;
+                    @include tamaños(20%,100% );
                     background-color: rgb(241, 114, 114);
                     color: blanchedalmond;
                     text-align: center;
@@ -1051,7 +1098,7 @@ div p{
      .mainRecetas {
          
 
-         @include tamañoMain(350vh)
+         @include tamañoMain(400vh)
      }
      .recetas {
  
@@ -1062,10 +1109,7 @@ div p{
          }
      
          &__Img {
-     
-         height: 40% ;
-     
-         width: 80%;
+         @include tamaños(40%,80% );
          
          top: 1800px;
         
@@ -1153,21 +1197,28 @@ div p{
 
     .recetas{
         &__Div{
-            width: 250px;
-            height: 250px;
+
+            @include tamaños(250px,250px );
         }
     }
 
 
+    .w-100{
+        @include tamaños(380px,90% );
+       
+    }
+    .recetaBoton{
+        top: 400px;
+    }
 .seccion{
     
     grid-row-gap: 10px;
     grid-column-gap: 20px;
-    &
+    
 
     &__Ap{
-        width: 125px;
-        height: 75px;
+        @include tamaños(75px,125px );
+        
         p{
             font-size: 10px;
         }
@@ -1177,13 +1228,13 @@ div p{
     }
 
     &__Ai{
-        width: 125px;
-        height: 75px;
+        @include tamaños(75px,125px );
+        
 
     }
     &__Img{
-        width: 125px;
-        height: 75px;
+        @include tamaños(75px,125px );
+        
 
     }
 }
