@@ -480,7 +480,7 @@ div p{
     justify-content: center;
     
     &__Ai{
-        @include tamaños(300px,500px );
+       
        
         :hover{
             box-shadow: 0 0 20px rgb(134, 4, 4);;
@@ -776,11 +776,7 @@ div p{
     .seccion{
        
         
-        &__Ai{
-            @include tamaños(2500px,400px );
-            
-            
-        }
+        
     
         &__Img{
             @include tamaños(150px,250px );
@@ -916,11 +912,7 @@ div p{
     .seccion{
        
         
-        &__Ai{
-            @include tamaños(125px,200px );
-            
-            
-        }
+        
     
         &__Img{
             @include tamaños(110px,180px );
@@ -1280,11 +1272,7 @@ div p{
         }
     }
 
-    &__Ai{
-        @include tamaños(75px,125px );
-        
-
-    }
+    
     &__Img{
         @include tamaños(75px,125px );
         
