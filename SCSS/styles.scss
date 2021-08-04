@@ -798,6 +798,13 @@ div p{
       
     }
 
+    .mainHistoria{
+        
+
+        @include tamañoMain(2900px)
+
+    }
+
 }
 
 
@@ -1103,7 +1110,8 @@ div p{
          
 
         &__Div{
-            height: 350px;
+            @include tamaños(350px,300px );
+            
         }
          
          &__Titulo{
@@ -1244,7 +1252,7 @@ div p{
     .mainRecetas {
          
 
-        @include tamañoMain(310vh)
+        @include tamañoMain(2210px)
     }
 
 

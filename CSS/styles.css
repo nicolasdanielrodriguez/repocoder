@@ -434,7 +434,9 @@ div p {
     width: 250px; }
   .seccion__Ap {
     height: 150px;
-    width: 250px; } }
+    width: 250px; }
+  .mainHistoria {
+    height: 2900px; } }
 
 /*768 PIXELES*/
 @media only screen and (max-width: 768px) {
@@ -578,7 +580,8 @@ div p {
   .mainProductos {
     height: 4200px; }
   .sectionProductos__Div {
-    height: 350px; }
+    height: 350px;
+    width: 300px; }
   .sectionProductos__Titulo {
     font-size: 100%; }
   .sectionProductos__img {
@@ -627,7 +630,7 @@ div p {
       width: 80%;
       margin-left: 10%; }
   .mainRecetas {
-    height: 310vh; }
+    height: 2210px; }
   .w-100 {
     height: 350px;
     width: 90%; }
